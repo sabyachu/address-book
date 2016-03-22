@@ -1,9 +1,16 @@
 // Business logic
-function Contact(first, last, email, phone) {
+function Contact(first, last, email, phone, addresses) {
   this.firstName = first;
   this.lastName = last;
   this.emailAddress = email;
   this.phoneNumber = phone;
+  this.addresses = [];
+}
+
+function Address(street, city, state){
+  this.street = street;
+  this.city = city;
+  this.state = state;
 }
 
 Contact.prototype.fullName = function() {
